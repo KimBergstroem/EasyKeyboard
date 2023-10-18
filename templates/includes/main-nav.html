@@ -6,9 +6,9 @@
                 All Products
             </a>
             <div class="dropdown-menu" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item">By Rating</a>
-                <a href="" class="dropdown-item">By Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
@@ -19,11 +19,11 @@
                 Keyboards
             </a>
             <div class="dropdown-menu" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">60% layout</a>
-                <a href="" class="dropdown-item">75% layout</a>
-                <a href="" class="dropdown-item">80% layout</a>
-                <a href="" class="dropdown-item">100% layout</a>
-                <a href="" class="dropdown-item">All Keyboards</a>
+                <a href="{% url 'products' %}?category=activewear,essentials" class="dropdown-item">60% layout</a>
+                <a href="{% url 'products' %}?category=jeans" class="dropdown-item">75% layout</a>
+                <a href="{% url 'products' %}?category=shirts" class="dropdown-item">80% layout</a>
+                <a href="{% url 'products' %}?category=activewear,essentials" class="dropdown-item">100% layout</a>
+                <a href="{% url 'products' %}?category=activewear,essentials,jeans,shirts" class="dropdown-item">All Keyboards</a>
             </div>
         </li>
 
@@ -33,10 +33,10 @@
                 Keycaps
             </a>
             <div class="dropdown-menu" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">Custom made</a>
-                <a href="" class="dropdown-item">Solid color</a>
-                <a href="" class="dropdown-item">Gaming</a>
-                <a href="" class="dropdown-item">All Keycaps</a>
+                <a href="{% url 'products' %}?category=bed_bath" class="dropdown-item">Custom made</a>
+                <a href="{% url 'products' %}?category=kitchen_dining" class="dropdown-item">Solid color</a>
+                <a href="{% url 'products' %}?category=jeans" class="dropdown-item">Gaming</a>
+                <a href="{% url 'products' %}?category=bed_bath,kitechen_dining" class="dropdown-item">All Keycaps</a>
             </div>
         </li>
 
@@ -46,10 +46,10 @@
                 Accessories
             </a>
             <div class="dropdown-menu" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">Cables</a>
-                <a href="" class="dropdown-item">Switches</a>
-                <a href="" class="dropdown-item">Frames</a>
-                <a href="" class="dropdown-item">All Accessories</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">Cables</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Switches</a>
+                <a href="{% url 'products' %}?category=kitchen" class="dropdown-item">Frames</a>
+                <a href="{% url 'products' %}?category=jeans" class="dropdown-item">All Accessories</a>
             </div>
         </li>
     </ul>
