@@ -93,3 +93,20 @@ body {
         padding-top: 164px;
     }
 }
+
+/* pad the top a bit when navbar is collapsed on mobile */
+/* This is often used to ensure that the page content fits 
+within the viewport, and the top padding (116px) 
+is subtracted from the available height */
+@media (max-width: 991px){
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+    .smaller-text{
+        font-size: 14px;
+    }
+}
