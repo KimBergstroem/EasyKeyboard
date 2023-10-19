@@ -30,6 +30,9 @@ def all_products(request):
                 # Annotate the products queryset with a lowercase version of the 'name' field
                 # This allows for case-insensitive sorting
                 products = products.annotate(lower_name=Lower('name'))
+                
+            if sortkey == 'category':
+                sortkey = 'category__name'
 
             # Check if the sorting direction is specified
             if 'direction' in request.GET:
