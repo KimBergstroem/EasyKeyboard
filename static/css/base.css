@@ -33,6 +33,16 @@ body {
     min-width: 260px;
 }
 
+/* Define styles for even rows */
+.even {
+    background-color: #f2f2f2; /* or any color you prefer */
+}
+
+/* Define styles for odd rows */
+.odd {
+    background-color: #ffffff; /* or any color you prefer */
+}
+
 .btn-outline-black {
     background: white;
     color: black !important;
