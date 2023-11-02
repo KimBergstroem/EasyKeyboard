@@ -61,8 +61,6 @@ body {
 .btn-black {
     background: black;
     color: white;
-    border-top-right-radius: 35% !important;
-    border-bottom-right-radius: 35% !important;
 }
 
 .shop-now-button:hover,
