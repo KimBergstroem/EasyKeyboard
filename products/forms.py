@@ -2,7 +2,7 @@ from django import forms
 from .models import Product, Category
 
 
-class Productform(form.Modelform):
+class ProductForm(forms.ModelForm):
     """
     Extends the form-modelforms built in from django
     """
@@ -12,10 +12,10 @@ class Productform(form.Modelform):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        categories = Category.object.all()
-        friendly_name = [(c.id, c.get_friendly_name()) for c in categories]
+        categories = Category.objects.all()
+        friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
 
         self.fields['category'].choices = friendly_names
-        for field_name, field in self.fields.item():
+        for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
 
